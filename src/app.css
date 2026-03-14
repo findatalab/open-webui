@@ -30,6 +30,22 @@
 	font-display: swap;
 }
 
+@font-face {
+	font-family: 'Book Antiqua';
+	src: local('Book Antiqua');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Book Antiqua';
+	src: local('Book Antiqua Bold');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
 /* --app-text-scale is updated via the UI Scale slider (Interface.svelte) */
 :root {
 	--app-text-scale: 1;
@@ -688,6 +704,28 @@ body {
 	background: #171717;
 	color: #eee;
 }
+
+.fingpt body {
+	background: #102d34;
+	color: #f6fcff;
+	font-family: 'Book Antiqua', serif;
+}
+
+.site-header {
+	display: none;
+}
+
+.fingpt .site-header {
+	display: block;
+}
+
+html.fingpt button,
+html.fingpt input,
+html.fingpt textarea,
+html.fingpt select {
+	font-family: 'Book Antiqua', serif;
+}
+
 
 /* Position the handle relative to each LI */
 .pm-li--with-handle {

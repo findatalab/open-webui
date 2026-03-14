@@ -382,6 +382,9 @@
 
 {#if $user}
 	<div class="app relative">
+		<div class="site-header hidden text-white bg-[#256569] px-4 py-2 text-lg font-bold border-b border-[#20535d]">
+			Финансовый Университет при Правительстве РФ
+		</div>
 		<div
 			class=" text-gray-700 dark:text-gray-100 bg-white dark:bg-gray-900 h-screen max-h-[100dvh] overflow-auto flex flex-row justify-end"
 		>

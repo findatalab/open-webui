@@ -7,6 +7,11 @@ export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		extend: {
+			colors: {
+				'university-primary': '#256569',
+				'university-secondary': '#006B80',
+				'university-accent': '#0098AF',
+			},
 			typography: {
 				DEFAULT: {
 					css: {

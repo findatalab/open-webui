@@ -66,6 +66,9 @@
 				} else if (localStorage.theme === 'her') {
 					document.documentElement.classList.add('her');
 					metaThemeColorTag.setAttribute('content', '#983724');
+				} else if (localStorage.theme === 'fingpt') {
+					document.documentElement.classList.add('fingpt');
+					metaThemeColorTag.setAttribute('content', '#256569');
 				} else {
 					document.documentElement.classList.add('dark');
 					metaThemeColorTag.setAttribute('content', '#171717');
@@ -84,7 +87,7 @@
 						}
 					}
 				});
-				const isDarkMode = document.documentElement.classList.contains('dark');
+			const isDarkMode = document.documentElement.classList.contains('dark') || document.documentElement.classList.contains('fingpt');
 
 				const logo = document.createElement('img');
 				logo.id = 'logo';
@@ -103,7 +106,7 @@
 			})();
 		</script>
 
-		<title>Open WebUI</title>
+		<title>FinGPT</title>
 
 		%sveltekit.head%
 	</head>
@@ -193,6 +196,10 @@
 			background: #983724;
 		}
 
+		html.fingpt #splash-screen {
+			background: linear-gradient(180deg, #1f3b41 0%, #0d242b 100%);
+		}
+
 		#logo-her {
 			display: none;
 		}
@@ -220,6 +227,16 @@
 
 		html.her #progress-bar {
 			display: block;
+		}
+
+		html.fingpt #progress-background {
+			display: block;
+			background-color: rgba(255, 255, 255, 0.2);
+		}
+
+		html.fingpt #progress-bar {
+			display: block;
+			background-color: #fff;
 		}
 
 		@media (max-width: 24rem) {
